@@ -192,13 +192,59 @@ EPL_2022_table3 %>%
                    domain = NULL)
     ) %>%
     gt_theme_538() %>%
+    tab_style(
+        style = list(
+            cell_fill(color = "#FFFAA0") #highlighting the Brentford row
+        ),
+        locations = cells_body(rows = 9)
+    ) %>%
+    tab_style(
+        style = list(
+            cell_text(color = "red")
+        ),
+        locations = cells_body(
+            columns = vars(xGD),
+            rows = xGD <= 0
+        )
+    ) %>% 
+    tab_style(
+        style = list(
+            cell_text(color = "blue")
+        ),
+        locations = cells_body(
+            columns = vars(xGD),
+            rows = xGD > 0
+        )
+    ) %>% 
+    tab_style(
+        style = list(
+            cell_text(color = "red")
+        ),
+        locations = cells_body(
+            columns = vars(GD),
+            rows = GD <= 0
+        )
+    ) %>% 
+    tab_style(
+        style = list(
+            cell_text(color = "blue")
+        ),
+        locations = cells_body(
+            columns = vars(GD),
+            rows = GD > 0
+        )
+    ) %>% 
+    tab_spanner(
+        label = "Via StatsBomb",
+        columns = c(9:11)
+    ) %>% 
     cols_width(Squad ~ 200) %>% 
     cols_align(align = "left",
                columns = 1) %>%
     tab_header(title = md("**2021-22 Premier League Table**"),
-               subtitle = glue("Teams sorted based on points thru Matchweek {matchweek}. Points Percentage is points garnered as a share of the total available from matches played.")) %>% 
+               subtitle = md(glue("**<span style = 'color:#e30613'>Brentford</span>** are well above the relegation zone in the club's first season in the Premier League. Teams sorted based on points thru Matchweek {matchweek}. Points Percentage is points earned as a share of the total available from each squad's matches played."))) %>% 
     tab_source_note(
-        source_note = md("DATA: fbref.com via {worldfootballR}.<br>Expected Goals data (xGS, xGC) from Statsbomb. xG is the probability that a shot will result in a goal based on the characteristics of that shot.<br>Table: @steodosescu | Inspired by Tom Mock.")) %>% 
+        source_note = md("DATA: fbref.com via {worldfootballR}.<br>Expected Goals data (xGS, xGC) from StatsBomb. xG is the probability that a shot will result in a goal based on the characteristics of that shot.<br>Table: @steodosescu | Inspired by Tom Mock.")) %>% 
     gt_plt_bar_pct(column = `Points Percentage`, scaled = FALSE, fill = "navy", background = "gray") %>% 
     gt_plt_bar_stack(list_data, width = 65,
                      labels = c("  WINS  ", "  DRAWS  ", "  LOSSES  "),
