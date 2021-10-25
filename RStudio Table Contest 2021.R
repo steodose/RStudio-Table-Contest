@@ -25,7 +25,8 @@ EPL_2022 <- get_match_results(country = "ENG", gender = "M", season_end_year = 2
 team_mapping <- 'https://raw.githubusercontent.com/steodose/Club-Soccer-Forecasts/main/team_mapping.csv' %>% 
     read_csv()
 
-matchweek <- 8 # Specify how many full matchweeks have been played
+matchweek <- 9 # Specify how many full matchweeks have been played
+last_week <- matchweek-1
 
 
 ##### Set up themes for plots and tables #####
@@ -194,9 +195,9 @@ EPL_2022_table3 %>%
     gt_theme_538() %>%
     tab_style(
         style = list(
-            cell_fill(color = "#FFFAA0") #highlighting the Brentford row
+            cell_fill(color = "#FFFAA0") #highlighting the Brentford row.
         ),
-        locations = cells_body(rows = 9)
+        locations = cells_body(rows = Squad=="Brentford")
     ) %>%
     tab_style(
         style = list(
