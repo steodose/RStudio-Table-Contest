@@ -198,6 +198,7 @@ EPL_2022_table3 %>%
             cell_fill(color = "#FFFAA0") #highlighting the Brentford row.
         ),
         locations = cells_body(rows = Squad=="Brentford")
+<<<<<<< HEAD
     ) %>%
     tab_style(
         style = cell_borders(sides = "bottom", color = "black", weight = px(1)),
@@ -206,6 +207,8 @@ EPL_2022_table3 %>%
     tab_style(
         style = cell_borders(sides = "bottom", color = "black", weight = px(1)),
         locations = cells_body(rows = 17)
+=======
+>>>>>>> 418d1bd8d5540516634378d3cf4a075a700a17d2
     ) %>%
     tab_style(
         style = list(
