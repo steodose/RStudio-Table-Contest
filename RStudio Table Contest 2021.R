@@ -242,9 +242,9 @@ EPL_2022_table3 %>%
     cols_align(align = "left",
                columns = 1) %>%
     tab_header(title = md("**2021-22 Premier League Table**"),
-               subtitle = md(glue("**<span style = 'color:#e30613'>Brentford</span>** are well above the relegation zone in the club's first season in the Premier League. Teams sorted based on points thru Matchweek {matchweek}. Points Percentage is points earned as a share of the total available from each squad's matches played."))) %>% 
+               subtitle = md(glue("**<span style = 'color:#e30613'>Brentford</span>** are well above the relegation zone in the club's first season in the Premier League. Their Expected Goals values indicate they may even be underperforming their true quality. Teams sorted based on points thru **Matchweek {matchweek}**."))) %>% 
     tab_source_note(
-        source_note = md("DATA: fbref.com via {worldfootballR}.<br>Table: @steodosescu | Inspired by Tom Mock.")) %>% 
+        source_note = md("DATA: fbref.com via {worldfootballR}.<br>Table: @steodosescu (Between the Pipes) | Inspired by Tom Mock.")) %>% 
     gt_plt_bar_pct(column = `Points Percentage`, scaled = FALSE, fill = "navy", background = "gray") %>% 
     gt_plt_bar_stack(list_data, width = 65,
                      labels = c("  WINS  ", "  DRAWS  ", "  LOSSES  "),
