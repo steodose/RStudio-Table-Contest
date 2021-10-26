@@ -214,7 +214,7 @@ EPL_2022_table4 <- EPL_2022_table3 %>%
 
 ##### Make Table Viz #####
 
-## Make league table highlighting Brentford
+## Option A: Make league table highlighting Brentford
 
 EPL_2022_table4 %>%
     gt() %>%
@@ -316,3 +316,83 @@ EPL_2022_table4 %>%
         locations = cells_column_labels(vars(xGS:xGD)) 
     ) %>% 
     gtsave("2021-22 Premier League Table.png")
+
+
+## Option B: Make league table with no Expected Goals columns to make less busy
+
+EPL_2022_table4 %>%
+    select(-xGS,-xGC,-xGD) %>% 
+    gt() %>%
+    data_color(columns = 5,
+               colors = scales::col_numeric(
+                   palette = c("white", "#3fc1c9"),
+                   domain = NULL)
+    ) %>%
+    gt_theme_538() %>%
+    tab_style(
+        style = list(
+            cell_fill(color = "#FFFAA0") #highlighting the Brentford row.
+        ),
+        locations = cells_body(rows = Squad=="Brentford")
+    ) %>%
+    tab_style(
+        style = cell_borders(sides = "bottom", color = "black", weight = px(1)),
+        locations = cells_body(rows = 4)
+    ) %>%
+    tab_style(
+        style = cell_borders(sides = "bottom", color = "black", weight = px(1)),
+        locations = cells_body(rows = 17)
+    ) %>%
+    tab_style(
+        style = list(
+            cell_text(color = "red")
+        ),
+        locations = cells_body(
+            columns = vars(GD),
+            rows = GD <= 0
+        )
+    ) %>% 
+    tab_style(
+        style = list(
+            cell_text(color = "blue")
+        ),
+        locations = cells_body(
+            columns = vars(GD),
+            rows = GD > 0
+        )
+    ) %>% 
+    cols_width(Squad ~ 200) %>% 
+    cols_align(align = "left",
+               columns = 1) %>%
+    cols_align(align = "center",
+               columns = 2) %>%
+    text_transform(
+        locations = cells_body(columns = `1-Wk Change`),
+        fn = function(x){
+            change <- as.integer(x)
+            choose_logo <-function(x){
+                if (x == 0){
+                    gt::html(fontawesome::fa("equals", fill = "#696969"))
+                } else if (x > 0){
+                    gt::html(glue::glue("<span style='color:#191970;text-indent:16px;font-face:bold;font-size:16px;'>{x}</span>"), fontawesome::fa("chevron-up", fill = "#1134A6"))
+                } else if (x < 0) {
+                    gt::html(glue::glue("<span style='color:#DA2A2A;font-face:bold;font-size:16px;'>{x}</span>"), fontawesome::fa("chevron-down", fill = "#DA2A2A"))
+                }
+            }
+            map(change, choose_logo)
+        }
+    ) %>%
+    tab_header(title = md("**2021-22 Premier League Table**"),
+               subtitle = md(glue("**<span style = 'color:#e30613'>Brentford</span>** are well above the relegation zone in the club's first season in the Premier League. The Bees' Expected Goals values indicate they may even be underperforming their true quality. Teams sorted based on points thru **Matchweek {matchweek}**."))) %>% 
+    tab_source_note(
+        source_note = md("DATA: fbref.com via {worldfootballR}.<br>Table: @steodosescu (Between the Pipes) | Inspired by Tom Mock.")) %>% 
+    gt_plt_bar_pct(column = `Points Percentage`, scaled = FALSE, fill = "navy", background = "gray") %>% 
+    gt_plt_bar_stack(list_data, width = 65,
+                     labels = c("  WINS  ", "  DRAWS  ", "  LOSSES  "),
+                     palette= c("#ff4343", "#bfbfbf", "#0a1c2b")) %>% 
+    tab_footnote(
+        footnote = "Points earned as a share of the total available from each squad's matches played.",
+        locations = cells_column_labels(vars(`Points Percentage`)) 
+    ) %>% 
+    gtsave("2021-22 Premier League Table_v2.png")
+
