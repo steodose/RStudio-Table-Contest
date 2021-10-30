@@ -2,7 +2,7 @@
 Stephan Teodosescu's repo for the 2021 RStudio Table Contest
 
 ## Abstract:
-This table shows the 2021-22 Enlgish Premier League as of Matchweek 10. Along with many metrics to identify team performance thus far into the season, I've highlighted Brentford, a newly-promoted club who I'm rooting for this season. 
+This table shows the 2021-22 English Premier League as of Matchweek 10. Along with many metrics to identify team performance thus far into the season, I've highlighted Brentford, a newly-promoted club who I'm rooting for this season. 
 
 ## Full Description:
 
