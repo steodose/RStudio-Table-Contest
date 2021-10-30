@@ -6,18 +6,18 @@ This table shows the 2021-22 Enlgish Premier League as of Matchweek 10. Along wi
 
 ## Full Description:
 
-Table Type: static-HTML
-Submission Type: Single Table Example
-Table: Link
-Repo: https://github.com/steodose/RStudio-Table-Contest
-RStudio Cloud:
-DT package used: false
-gt package used: true
-reactable package used: false
-flextable package used: false
-huxtable package used: false
-kableExtra package used: false
-Other packages: tidyverse, gtExtras
+-Table Type: static-HTML
+-Submission Type: Single Table Example
+-Table: Link
+-Repo: https://github.com/steodose/RStudio-Table-Contest
+-RStudio Cloud:
+-DT package used: false
+-gt package used: true
+-reactable package used: false
+-flextable package used: false
+-huxtable package used: false
+-kableExtra package used: false
+-Other packages: tidyverse, gtExtras
 
 Premier League Standings Table
 ------------
