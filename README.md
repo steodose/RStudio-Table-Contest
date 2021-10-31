@@ -1,6 +1,8 @@
 # RStudio-Table-Contest
 Stephan Teodosescu's repo for the 2021 RStudio Table Contest
 
+[Link to table](http://stephanteodosescu.com/RStudio-Table-Contest/)
+
 ## Abstract:
 This table shows the 2021-22 English Premier League standings as of Matchweek 9. Along with several metrics to identify team performance thus far into the season, I've highlighted Brentford, a newly-promoted club I'm rooting for this season.
 
