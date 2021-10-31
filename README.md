@@ -16,8 +16,7 @@ My table heavily leans on the fantastic {gt} and {gtExtras} packages and was ins
 * Points Percentage
 * Win/Draws/Losses
 
-------------
-
+## Details
 - Table Type: static-HTML
 - Submission Type: Single Table Example
 - Table: Link
