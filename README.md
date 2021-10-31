@@ -21,7 +21,7 @@ My table heavily leans on the fantastic {gt} and {gtExtras} packages and was ins
 ## Details
 - Table Type: static-HTML
 - Submission Type: Single Table Example
-- Table: Link
+- Table: [Link](http://stephanteodosescu.com/RStudio-Table-Contest/)
 - Repo: https://github.com/steodose/RStudio-Table-Contest
 - RStudio Cloud:
 - DT package used: false
