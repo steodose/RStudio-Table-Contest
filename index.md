@@ -1,3 +1,5 @@
+![Explosive Plays](https://raw.githubusercontent.com/steodose/RStudio-Table-Contest/main/2021-22%20Premier%20League%20Table.png)
+
 ## Abstract:
 This table shows the 2021-22 English Premier League standings as of Matchweek 9. Along with several metrics to identify team performance thus far into the season, I've highlighted Brentford, a newly-promoted club I'm rooting for this season.
 
@@ -12,8 +14,6 @@ My table heavily leans on the fantastic {gt} and {gtExtras} packages and was ins
 * Form (outcomes of each match so far in terms of wins, draws, and losses)
 * Points Percentage
 * Win/Draws/Losses
-
-![Explosive Plays](https://raw.githubusercontent.com/steodose/RStudio-Table-Contest/main/2021-22%20Premier%20League%20Table.png)
 
 ### Contact
 
