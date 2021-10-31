@@ -5,7 +5,7 @@ Stephan Teodosescu's repo for the 2021 RStudio Table Contest
 This table shows the 2021-22 English Premier League standings as of Matchweek 9. Along with several metrics to identify team performance thus far into the season, I've highlighted Brentford, a newly-promoted club I'm rooting for this season.
 
 ## Full Description:
-My table heavily leans on the fantastic {gt} and {gtExtras} packages and was inspired by several of Tom Mock's blog posts showing examples of how to properly display visual information in tabular format. While my personal philosophy is simple is better, I'll admit I tried to use as many functions and features of the aformentioned packages as possible in this contest. The table inlcudes the following fields:
+My table heavily leans on the fantastic {gt} and {gtExtras} packages and was inspired by several of Tom Mock's blog posts showing examples of how to properly display visual information in tabular format. While my personal philosophy is simple is better, I'll admit I tried to use as many functions and features of the aforementioned packages as possible in this contest. The table includes the following fields:
 
 * Rank
 * Team/logo
