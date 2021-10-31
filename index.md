@@ -17,4 +17,4 @@ My table heavily leans on the fantastic {gt} and {gtExtras} packages and was ins
 
 ### Contact
 
-Contact me on Twitter [@steodosescu](https://twitter.com/steodosescu) or visit [stephanteodosescu.com](https://stephanteodosescu.com/). You can check out my personal blog [Between the Pipes](https://betweenpipes.wordpress.com/) for more sports analytics (and more) content.
+Contact me on Twitter [@steodosescu](https://twitter.com/steodosescu) or visit [stephanteodosescu.com](https://stephanteodosescu.com/). You can also check out my personal blog [Between the Pipes](https://betweenpipes.wordpress.com/) for additional sports analytics (and more) content.
